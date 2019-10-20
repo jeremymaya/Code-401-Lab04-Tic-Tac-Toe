@@ -24,14 +24,15 @@ namespace Lab04_TicTacToe.Classes
 			Board = new Board();
 		}
 
-		/// <summary>
-		/// Activate the Play of the game
-		/// </summary>
-		/// <returns>Winner</returns>
-		public Player Play()
-		{
 
-			//TODO: Complete this method and utilize the rest of the class structure to play the game.
+        /// <summary>
+        /// Activate the Play of the game
+        /// </summary>
+        /// <returns>Winner</returns>
+        public Player Play()
+        {
+
+            //TODO: Complete this method and utilize the rest of the class structure to play the game.
 
             /*
              * Complete this method by constructing the logic for the actual playing of Tic Tac Toe. 
@@ -47,15 +48,23 @@ namespace Lab04_TicTacToe.Classes
 
             Use any and all pre-existing methods in this program to help construct the method logic. 
              */
-		}
+
+            Board.DisplayBoard();
 
 
-		/// <summary>
-		/// Check if winner exists
-		/// </summary>
-		/// <param name="board">current state of the board</param>
-		/// <returns>if winner exists</returns>
-		public bool CheckForWinner(Board board)
+            CheckForWinner(Board);
+            NextPlayer();
+
+            return PlayerOne;
+        }
+
+
+        /// <summary>
+        /// Check if winner exists
+        /// </summary>
+        /// <param name="board">current state of the board</param>
+        /// <returns>if winner exists</returns>
+        public bool CheckForWinner(Board board)
 		{
 			int[][] winners = new int[][]
 			{
@@ -85,6 +94,7 @@ namespace Lab04_TicTacToe.Classes
 				// TODO:  Determine a winner has been reached. 
 				// return true if a winner has been reached. 
 			
+                //If string a b c ALL matches with O or X = winner thus return true 
 			}
 
 			return false;

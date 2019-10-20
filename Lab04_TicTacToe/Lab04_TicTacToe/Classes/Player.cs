@@ -17,7 +17,11 @@ namespace Lab04_TicTacToe.Classes
 		/// </summary>
 		public bool IsTurn { get; set; }
 
-
+        /// <summary>
+        /// Gets the user selected position number
+        /// </summary>
+        /// <param name="board">Gameboard</param>
+        /// <returns>Position number</returns>
 		public Position GetPosition(Board board)
 		{
 			Position desiredCoordinate = null;
@@ -31,7 +35,11 @@ namespace Lab04_TicTacToe.Classes
 
 		}
 
-
+        /// <summary>
+        /// Convert a position number into row and column by creating a new instance of Position
+        /// </summary>
+        /// <param name="position">Position number from GetPosition</param>
+        /// <returns>Position in row and column</returns>
 		public static Position PositionForNumber(int position)
 		{
 			switch (position)
@@ -50,7 +58,10 @@ namespace Lab04_TicTacToe.Classes
 			}
 		}
 
-	
+	    /// <summary>
+        /// For each turn, updates user selected position number with marker
+        /// </summary>
+        /// <param name="board"></param>
 		public void TakeTurn(Board board)
 		{
 			IsTurn = true;
