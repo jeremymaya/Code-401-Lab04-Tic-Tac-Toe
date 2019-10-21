@@ -33,11 +33,11 @@ Then select and open ```Lab04_TicTacToe.sln```
 
 ### Visuals
 #### Application Start
-![Image 1](https://via.placeholder.com/750x500)
+![Image 1](https://github.com/jeremymaya/Code-401-Lab04-Tic-Tac-Toe/blob/master/Screenshots/Menu.JPG)
 #### Using the Application
-![Image 1](https://via.placeholder.com/750x500)
+![Image 1](https://github.com/jeremymaya/Code-401-Lab04-Tic-Tac-Toe/blob/master/Screenshots/Won.JPG)
 #### Application End
-![Image 1](https://via.placeholder.com/750x500)
+![Image 1](https://github.com/jeremymaya/Code-401-Lab04-Tic-Tac-Toe/blob/master/Screenshots/Draw.JPG)
 
 ---
 
