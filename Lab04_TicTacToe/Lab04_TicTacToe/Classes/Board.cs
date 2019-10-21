@@ -16,7 +16,9 @@ namespace Lab04_TicTacToe.Classes
 			{"7", "8", "9"},
 		};
 
-
+        /// <summary>
+        /// Accesses multidimensional array Game Board to render a game board
+        /// </summary>
 		public void DisplayBoard()
 		{
             for (int row = 0; row < GameBoard.GetLength(0); row++)

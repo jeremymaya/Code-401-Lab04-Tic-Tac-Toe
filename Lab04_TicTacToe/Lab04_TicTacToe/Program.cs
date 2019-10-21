@@ -15,9 +15,10 @@ namespace Lab04_TicTacToe
             }
         }
 
-        // TODO: Setup your game. Create a new method that creates your players and instantiates the game class. Call that method in your Main method.
-        // You are requesting a Winner to be returned, Determine who the winner is output the celebratory message to the correct player. If it's a draw, tell them that there is no winner. 
-
+        /// <summary>
+        /// Setups and runs a tic-tac-toe game by creating two player instances and a game instance with the player instances
+        /// </summary>
+        /// <returns>boolean</returns>
         public static bool GameSetup()
         {
             Console.Clear();
