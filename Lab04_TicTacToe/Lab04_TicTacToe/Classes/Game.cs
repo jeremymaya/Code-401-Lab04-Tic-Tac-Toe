@@ -51,11 +51,37 @@ namespace Lab04_TicTacToe.Classes
 
             Board.DisplayBoard();
 
+            int turn = 0;
+            bool playing = true;
+            PlayerOne.IsTurn = true;
 
-            CheckForWinner(Board);
-            NextPlayer();
-
-            return PlayerOne;
+            while (playing || turn < 3)
+            {
+                if (PlayerOne.IsTurn)
+                {
+                    PlayerOne.TakeTurn(Board);
+                    if (CheckForWinner(Board))
+                    {
+                        Winner = PlayerOne;
+                        playing = false;
+                    }
+                }
+                else
+                {
+                    PlayerTwo.TakeTurn(Board);
+                    if (CheckForWinner(Board))
+                    {
+                        Winner = PlayerTwo;
+                        playing = false;
+                    }
+                }
+                Board.DisplayBoard();
+                SwitchPlayer();
+                NextPlayer();
+                turn++;
+            }
+            Board.DisplayBoard();
+            return Winner;
         }
 
 
@@ -91,12 +117,11 @@ namespace Lab04_TicTacToe.Classes
 				string b = Board.GameBoard[p2.Row, p2.Column];
 				string c = Board.GameBoard[p3.Row, p3.Column];
 
-				// TODO:  Determine a winner has been reached. 
-				// return true if a winner has been reached. 
-			
-                //If string a b c ALL matches with O or X = winner thus return true 
+                if((a == "O" && b == "O" && c == "O") || (a == "X" && b == "X" && c == "X"))
+                {
+                    return true;
+                }
 			}
-
 			return false;
 		}
 
@@ -117,10 +142,7 @@ namespace Lab04_TicTacToe.Classes
 		{
 			if (PlayerOne.IsTurn)
 			{
-              
 				PlayerOne.IsTurn = false;
-
-              
 				PlayerTwo.IsTurn = true;
 			}
 			else
@@ -129,7 +151,5 @@ namespace Lab04_TicTacToe.Classes
 				PlayerTwo.IsTurn = false;
 			}
 		}
-
-
 	}
 }

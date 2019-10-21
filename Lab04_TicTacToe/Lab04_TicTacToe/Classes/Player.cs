@@ -32,7 +32,6 @@ namespace Lab04_TicTacToe.Classes
 				desiredCoordinate = PositionForNumber(position);
 			}
 			return desiredCoordinate;
-
 		}
 
         /// <summary>
