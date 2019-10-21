@@ -4,13 +4,12 @@ using System.Text;
 
 namespace Lab04_TicTacToe.Classes
 {
-	class Game
+	public class Game
 	{
 		public Player PlayerOne { get; set; }
 		public Player PlayerTwo { get; set; }
 		public Player Winner { get; set; }
 		public Board Board { get; set; }
-
 
 		/// <summary>
 		/// Require 2 players and a board to start a game. 
@@ -23,7 +22,6 @@ namespace Lab04_TicTacToe.Classes
 			PlayerTwo = p2;
 			Board = new Board();
 		}
-
 
         /// <summary>
         /// Activate the Play of the game
@@ -75,7 +73,6 @@ namespace Lab04_TicTacToe.Classes
             return Winner;
         }
 
-
         /// <summary>
         /// Check if winner exists
         /// </summary>
@@ -115,7 +112,6 @@ namespace Lab04_TicTacToe.Classes
 			}
 			return false;
 		}
-
 
 		/// <summary>
 		/// Determine next player
