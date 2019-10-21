@@ -55,32 +55,41 @@ namespace Lab04_TicTacToe.Classes
             bool playing = true;
             PlayerOne.IsTurn = true;
 
-            while (playing || turn < 3)
+            while (playing)
             {
-                if (PlayerOne.IsTurn)
+                if(turn >= 9)
+                {
+                    Console.WriteLine("It's a draw!");
+                    playing = false;
+                }
+                else if (PlayerOne.IsTurn)
                 {
                     PlayerOne.TakeTurn(Board);
+                    turn++;
                     if (CheckForWinner(Board))
                     {
                         Winner = PlayerOne;
+                        Board.DisplayBoard();
+                        Console.WriteLine($"{Winner.Name} won the game!");
                         playing = false;
                     }
                 }
-                else
+                else if(PlayerTwo.IsTurn)
                 {
                     PlayerTwo.TakeTurn(Board);
+                    turn++;
                     if (CheckForWinner(Board))
                     {
                         Winner = PlayerTwo;
+                        Board.DisplayBoard();
+                        Console.WriteLine($"{Winner.Name} won the game!");
                         playing = false;
                     }
                 }
                 Board.DisplayBoard();
                 SwitchPlayer();
                 NextPlayer();
-                turn++;
             }
-            Board.DisplayBoard();
             return Winner;
         }
 

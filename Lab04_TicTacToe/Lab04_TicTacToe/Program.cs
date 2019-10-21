@@ -3,7 +3,7 @@ using System;
 
 namespace Lab04_TicTacToe
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -40,15 +40,14 @@ namespace Lab04_TicTacToe
 
             newGame.Play();
 
-            Console.WriteLine($"{newGame.Winner.Name} won the game!");
             Console.WriteLine("");
-            Console.WriteLine($"{newGame.Winner.Name}, would you like to play again?");
+            Console.WriteLine("Would you like to play again? (y/n)");
 
             switch (Console.ReadLine())
             {
-                case "Y":
+                case "y":
                     return true;
-                case "N":
+                case "n":
                     return false;
             }
             return false;
